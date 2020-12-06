@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		.wrapper{
+			width: 1200px;
+			margin: auto;
+		}
+		.item{
+			display: flex;
+			margin: 10px 0;
+		}
+		.item .pic{
+			width: 480px;
+		}
+		.item .pic img{
+			width: 100%;
+		}
+		.item .txt{
+			width: 720px;
+		}
+		.wrapper .item:nth-child(odd) .pic{
+			order:1;
+		}
+	</style>
+
+</head>
+<body>
+	
+
+	<div class="wrapper">
+		<div class="item">
+			<div class="pic">
+				<img src="https://picsum.photos/300/200?random=1" alt="圖片說明">
+			</div>
+			<div class="txt">
+				<h3>title</h3>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus ad praesentium veritatis nostrum odio officia rem mollitia numquam saepe. Vitae minima ducimus beatae temporibus adipisci quibusdam nisi esse voluptate omnis!</p>
+			</div>
+		</div>
+		<div class="item">
+			<div class="pic">
+				<img src="https://picsum.photos/300/200?random=2" alt="圖片說明">
+			</div>
+			<div class="txt">
+				<h3>title</h3>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus ad praesentium veritatis nostrum odio officia rem mollitia numquam saepe. Vitae minima ducimus beatae temporibus adipisci quibusdam nisi esse voluptate omnis!</p>
+			</div>
+		</div>
+		<div class="item">
+			<div class="pic">
+				<img src="https://picsum.photos/300/200?random=3" alt="圖片說明">
+			</div>
+			<div class="txt">
+				<h3>title</h3>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus ad praesentium veritatis nostrum odio officia rem mollitia numquam saepe. Vitae minima ducimus beatae temporibus adipisci quibusdam nisi esse voluptate omnis!</p>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+</html>
