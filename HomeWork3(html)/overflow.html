@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 1000px;
+            height: 300px;
+            margin: auto;
+            display: flex;
+        }
+        .item{
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .item .pic{
+            vertical-align: top;
+        }
+        .pic img{
+            vertical-align: top;
+        }
+        .txt{
+            height: 300px;
+            background-color: #ccc;
+            position: absolute;
+            left: 0;
+            top: 80%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            transition: .5s;
+        }
+        .txt h3{
+            height: 10%;
+        }
+        .item:hover .txt{
+            position: absolute;
+            left: 0;
+            top: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="item">
+            <div class="pic">
+                <img src="https://picsum.photos/300/300/?random=1">
+            </div>
+            <div class="txt">
+                <h3>title</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime nobis quod veritatis architecto
+                    dicta, itaque aut laudantium doloremque eligendi assumenda.</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="https://picsum.photos/300/300/?random=1">
+            </div>
+            <div class="txt">
+                <h3>title</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime nobis quod veritatis architecto
+                    dicta, itaque aut laudantium doloremque eligendi assumenda.</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="https://picsum.photos/300/300/?random=1">
+            </div>
+            <div class="txt">
+                <h3>title</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime nobis quod veritatis architecto
+                    dicta, itaque aut laudantium doloremque eligendi assumenda.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
