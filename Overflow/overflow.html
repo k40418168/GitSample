@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .wrap{
+            width: 1000px;
+            height: 300px;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .item{
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            width: 400px;
+            height: 250px;
+            margin: 50px;
+        }
+        .pic{
+            vertical-align: top;
+            width: 100%;
+            height: 100%;
+        }
+        .pic img{
+            width: 100%;
+            height: 100%;
+        }
+        .txt{
+            height: 300px;
+            background-color: rgba(200, 200, 200, .8);
+            position: absolute;
+            left: 0;
+            top: 80%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            transition: .5s;
+        }
+        .txt h3{
+            height: 20%;
+            font-size: 30px;
+        }
+        .item:hover .txt{
+            position: absolute;
+            left: 0;
+            top: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="item">
+            <div class="pic">
+                <img src="/Overflow/dada.webp">
+            </div>
+            <div class="txt">
+                <h3>大大</h3>
+                <p>三兄弟中年齡最年長。領導者。他是一隻愛玩的熊。大大，善於交際但又不善交際。儘管如此，他不斷想認識新朋友，並喜歡他所遇到的大家。在《墨西哥卷餅之戀》一集，回憶中提到年幼的大大被消防員從樹上救下。擅長DJ、寫歌。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="/Overflow/panda.jpg">
+            </div>
+            <div class="txt">
+                <h3>胖達</h3>
+                <p>他是三兄弟中最多情的，且容易尷尬。他專精於科技，且很會使用社群網路和交友網站。胖達比他的兄弟沒有自信。胖達是素食主義者，且對花生和貓咪嚴重過敏。因有一次在市場對花生過敏，因此認識皮璐璐，並暗戀她。喜歡日本文化，擅長繪畫、寫歌、彈吉他。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="/Overflow/gigi.jpg">
+            </div>
+            <div class="txt">
+                <h3>阿極</h3>
+                <p>他是大大和胖達的弟弟。阿極往往很堅強，很少說話。因為模仿和學習能力強，他也是精湛廚師，莎莎舞者，機器人新手和武術家（擅長日本傳統格鬥術和斧頭攻擊）。他講話用第三人稱，大多是先說他的名字之後再說話，因為小時候在俄羅斯度過，跟尤理學的習慣（「尤里與熊」透露），目前已知還懂得法文、韓文、俄文及日文。在「咱的包」一集能跟鴿子對話。阿極是三兄弟中最鎮靜的，即使在最尷尬和難堪的情況，態度始終保持冷靜。阿極在冰箱睡覺時會握著他的消防斧 ，因為在俄羅斯學習伐木。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="/Overflow/monster.jpg" alt="">
+            </div>
+            <div class="txt">
+                <h3>麥勾來</h3>
+                <p>他獨自一人生活在與熊熊居住的同一片森林之中，生活孤獨、不善交際，直到他遇見三隻熊熊。在台配版本設定中，他言談時有江浙話的語調。喜歡吃起司多多球。
+                    實際膚色為金色，在《泡泡》一集中，熊熊們用水柱幫他清洗身體時，清洗完的身體是閃亮的金色，頭髮看起來也更濃密。一直以來看到的墨綠色是他沾染污垢在身上的顏色。
+                    在《麥勾來》一集中，熊熊們通過一個叫「來住我家」的網站同意讓查理住在熊熊窩一陣子。這導致他無意中製造了不少混亂。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="/Overflow/smallcao.jpg" alt="">
+            </div>
+            <div class="txt">
+                <h3>朴小可</h3>
+                <p>10歲韓裔美國女孩，神童，她不僅跳級，也在月初如願考上大學。
+                    在《克洛伊》一集，她闖入熊熊窩並研究牠們當大學報告，之後她跟熊熊們結為好友。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="/Overflow/QQ.jpg" alt="">
+            </div>
+            <div class="txt">
+                <h3>軟Q</h3>
+                <p>他是著名的網路明星，但他不在公開上談論。大大跟他說話，並喜歡他的影片，但軟Q自我中心，更關心的是物質生活。在《病毒視頻》中稱不需要任何朋友，因為他認為朋友沒什麼用，然後把大大踢下車。</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
