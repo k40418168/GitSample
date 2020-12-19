@@ -1,0 +1,125 @@
+* img{
+    width: 100%;
+    vertical-align: top;
+}
+font-family: 'Merriweather', serif;
+font-family: 'Open Sans', sans-serif;
+section{
+    display: block;
+}
+.nav{
+    background-color:  rgb(16,53,79);
+}
+
+.intro{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 0px 0px 0px;
+    background-color: rgb(234,242,246);
+    justify-content: center;
+}
+
+.intro-txt *{
+
+    box-sizing: border-box;
+    margin: 40px;
+}
+.intro .btn{
+    margin-top :-10px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.intro h2{
+    font-size: 30px;
+}
+.btn{
+    width: 60%;
+    background-color: #e76e33;
+    color: white;
+    border-radius: 30px;
+    border: 1px solid transparent;
+    font-size: 16px;
+}
+.intro-pic{
+    padding: 10px;
+}
+.slg{
+    padding: 20px 0px;
+    /*background-color: rgb(240, 240, 240);*/
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.slg h2{
+    font-size: 30px;
+    margin: 30px;
+}
+.slg .item-pic{
+    width: 20%;
+    margin: auto;
+}
+.item{
+    margin: 20px 0px;
+}
+.item-txt{
+    width: 100%;
+}
+.item-txt h3{
+    margin: 20px 0px;
+}
+.e-mail-banner{
+    background-color: rgb(16,53,79);
+    text-align: center;
+}
+.banner{
+    color: white;
+    padding: 20px 0px;
+}
+.banner h3{
+    width: 100%;
+    font-size: 32px;
+    padding: 30px 0px 20px 0px;
+    font-weight: 1;
+}
+
+.e-mail-banner p{
+    color: rgb(121, 194, 222);
+    padding:20px 0px;
+}
+.banner input{
+    width: 90%;
+    border-radius: 30px;
+    padding: 15px;
+}
+.e-mail-btn{
+    padding: 15px;
+    margin: 30px 20px 60px 20px;
+}
+.saying-banner{
+    background-color:#e76e33;
+    text-align: center;
+    padding-bottom: 80px;
+}
+.saying-banner-pic{
+    width: 40px;
+    height: 40px;
+    margin: auto;
+}
+.saying-banner h2{
+    padding: 30px;
+    font-size: 30px;
+    font-weight: 1;
+}
+.saying-banner p{
+    font-style: italic;
+    font-weight: 1;
+    font-size: 22px;
+    padding: 15px;
+}
+.saying-banner h5{
+    font-size: 20px;
+}
