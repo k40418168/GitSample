@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)https://annahunag.azurewebsites.net/Pokemon-HW/Pokemon02.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="./bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+
+
+  <title>Pokemon!</title>
+  <style>
+    .wrap {
+      background-image: url(./25.webp);
+    }
+    .banner{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+  </style>
+</head>
+
+<body style="">
+  <div class="wrap">
+    <div class="banner position-sticky">
+      <h1>寶可夢圖鑑</h1>
+
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button onclick="LoadAll()" type="button" class="btn btn-primary">載入寶可夢圖鑑列表</button>
+        <button onclick="AddOne()" type="button" class="btn btn-primary">加一張圖</button>
+        <button onclick="RemoveOne()" type="button" class="btn btn-primary">少一張圖</button>
+        <button onclick="Reset()" type="button" class="btn btn-primary">RESET</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center"></div>
+    </div>
+
+    <template id="pokemonTemplate">
+      <div class="card m-2" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="id card-title"></h5>
+          <img class="img card-img-top" src="./001.png" alt="">
+          <p class="name card-text"></p>
+          <button class="btn btn-primary">詳細資料</button>
+        </div>
+      </div>
+    </template>
+
+    <!-- Modal -->
+    <div class="modal fade" id="pokemonModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          </div>
+          <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-primary">關閉</button>
+        </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+  <script src="./pokemon.js">
+  </script>
+
+
+
+</body></html>
