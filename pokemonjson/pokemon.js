@@ -51,6 +51,9 @@ function RemoveOne(){
     itemIndex = -1;
     return;
   }
+  if (Index = 0){
+    return;
+  }
   itemIndex--;
   Reset();
   pokeTemplate(itemIndex);
