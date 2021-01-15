@@ -74,15 +74,14 @@
     <div class="wrap">
         <div class="btn-radio-block">
             <h2>遊戲難度</h2>
-            <input type="radio" value="3" name="tileSize" id="tileSize3" class="btn-radio" />
-            <label for="tileSize4">3x3</label>
+            <!-- <input type="radio" value="3" name="tileSize" id="tileSize3" class="btn-radio" />
+            <label for="tileSize4">3x3</label> -->
             <input type="radio" value="4" name="tileSize" id="tileSize4" checked="checked" class="btn-radio" />
             <label for="tileSize4">4x4</label>
         </div>
         <div class="btn-block">
             <button type="button" class="btn btn-primary btn-lg" onclick="Start()">開始遊戲</button>
-            <button type="button" class="btn btn-primary btn-lg" onclick="Restart()">打亂拼圖</button>
-            <button type="button" class="btn btn-primary btn-lg">重新開始</button>
+            <button type="button" class="btn btn-primary btn-lg" onclick="Restart()">重新開始</button>
         </div>
         <div class="pizzle">
             <div id="dvPuzzle" class="d-flex flex-wrap">
@@ -100,12 +99,13 @@
         //     cxt.drawImage(img, 0, 0, 400, 300); //画好图片的位置
         // }
         var posConv = [];
+        
         function Start() {
             
             let pizzle = document.getElementById("dvPuzzle");
             pizzle.innerHTML = "";
             for (var i = 0; i < 16; i++) {
-                $(pizzle).append(`<div class='PicCell' id="Pic${i}" onclick='move(event)' style="order:${i}"><img src='S__42205197.jpg'  /></div>`);
+                $(pizzle).append(`<div class='PicCell' id="Pic${i}" onclick='move(event)' style="order:${i}"><img src='girl.jpg'  /></div>`);
                 var row = parseInt(i / 4);
                 var col = i % 4;
                 $("#Pic" + i + " img").css("margin-left", col * -120 + 1).css("margin-top", row * -120 + 1);
@@ -116,33 +116,94 @@
                 };
             }
             $("#Pic15 img").remove();
-            
+            randomMove();
+        }
+        function Restart(){
+            randomMove();
         }
         
-        function move(event){
+        function randomMove(){
+            for(i=0;i<30;i++){
+                 debugger;
+                let id = Math.floor(Math.random()*15);
+                var randomID = "Pic"+id;
+                console.log(randomID);
+                let order = document.getElementById(randomID).style.order;
+                let space = document.getElementById("Pic15").style.order;
+                var cells = $("#dvPuzzle div");
+                var toCheck = getNearPos2(id);
+                var last = document.getElementById("Pic15").style.order;
+                while (toCheck.length > 0) {
+                    var j = toCheck.pop();
+                    if (j == last){
+                        document.getElementById(randomID).style.order = space;
+                        document.getElementById("Pic15").style.order = order;
+                    }
+                    console.log(j,last);
+                }
+                
+            }
+        }
+        function move(){
             let id = event.currentTarget.id;
             let order = document.getElementById(id).style.order;
             let space = document.getElementById("Pic15").style.order;
-            document.getElementById(id).style.order = space;
-            document.getElementById("Pic15").style.order = order;
-            var toCheck = getNearPos(i);
+            var cells = $("#dvPuzzle div");
+            var toCheck = getNearPos();
+            var last = document.getElementById("Pic15").style.order;
+            while (toCheck.length > 0) {
+                var j = toCheck.pop();
+			    if (j == last){
+                    document.getElementById(id).style.order = space;
+                    document.getElementById("Pic15").style.order = order;
+                }
+            }
+            success();
         }
-        function getNearPos(i){
-            var i = parseInt(event.currentTarget.id.replace("Pic","")); 
+        function getNearPos(){
+            var i = parseInt(event.currentTarget.style.order); 
             var check = []; 
             var row = posConv[i].row,col = posConv[i].col;
             if (row>0)
-                check.push((row-1)*4 + col);
-            if (row<4)
-                check.push((row+1)*4+col);
-            if (col > 0)
+                check.push(i-4);
+            if (row<3)
+                check.push(i+4);
+            if (col > 0 || i!=4 || i!=8 || i!=12)
                 check.push(i-1);
-            if (col < 4)
+            if (col < 4 || i!=3 || i!=7 || i!=11 || i!=15)
                 check.push(i+1);
             return check;
             
         }
-        
+        function getNearPos2(id){
+            var check = []; 
+            var row = posConv[id].row,col = posConv[id].col;
+            
+            if (row>0)
+                check.push(id-4);
+            if (row<3)
+                check.push(id+4);
+            if (col > 0 || id!=4 || id!=8 || id!=12)
+                check.push(id-1);
+            if (col < 4 || id!=3 || id!=7 || id!=11 || id!=15)
+                check.push(id+1);
+            return check;
+            console.log(check);
+        }
+        function success(){
+            let checkkID = [];
+            let checkOrder = [];
+            for(i=0;i<16;i++){
+                let Order = parseInt(document.getElementById(`Pic${i}`).style.order);
+                checkOrder.push(Order);
+                checkkID.push(i);
+            }
+            let _checkOrder = checkOrder.toString();
+            let _checkkID = checkkID.toString();
+            if(_checkOrder == _checkkID){
+                alert("完成了");
+            }
+        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
